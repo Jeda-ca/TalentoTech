@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        fieldset {
+        border: 3px solid #ccc;
+        padding: 30px;
+        margin: 10px;
+        box-shadow: 2px 2px 5px #888888;
+        }
+
+        legend {
+            font-size: 1.2em;
+            color: #333;
+            padding: 0 10px;
+        }
+
+        legend {
+            color: navy;
+            font-weight: bold;
+            padding: 5px 10px;
+            border: 1px solid navy;
+            border-radius: 3px;
+            background-color: white;
+        }
+       
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+            margin: auto;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+    
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    
+        input[type="text"],
+        input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    
+        input[type="submit"] {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+    
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="">
+        <fieldset>
+            <legend>Gestión de contactos</legend>
+            <label for="">Nombre:</label>
+            <input type="text" name="name" placeholder="Nombre" required>
+            <br><br>
+            <label for="">Teléfono:</label>
+            <input type="text" name="name" placeholder="Teléfono" maxlength="10" required>
+            <br><br>
+            <input type="file">
+            <br><br>
+            <input type="submit" value="Guardar">
+            <br><br>
+            
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,79 @@
+console.log("---------------------------------------------------------------------------");
+console.log("============ Parte 1: Declaración de Variables y Tipos de Datos ===========");
+console.log("---------------------------------------------------------------------------");
+let nombre = "Jesus Carvajal";
+let edad = 20;
+let esEstudiante = true;
+
+console.log("Nombre: ", nombre);
+console.log("Edad: ", edad);
+console.log("Es Estudiante? ", esEstudiante);
+console.log("---------------------");
+
+nombre = "Jesús David Carvajal Coneo";
+edad = 21;
+esEstudiante = false;
+
+console.log("Nombre: ", nombre);
+console.log("Edad: ", edad);
+console.log("Es Estudiante? ", esEstudiante);
+console.log("---------------------\n");
+
+console.log("---------------------------------------------------------------------------");
+console.log("============== Parte 2: Operaciones Matemáticas y Comparación =============");
+console.log("---------------------------------------------------------------------------");
+
+let a = 20;
+let b = 45;
+
+console.log("Valor de A = ",a);
+console.log("Valor de B = ",b);
+
+
+let suma = 0;
+let resta = 0;
+let multiplicar = 0;
+let dividir = 0
+
+suma = a + b;
+resta = a - b;
+multiplicar = a * b;
+dividir = a/b;
+
+console.log("============== RESULTADOS =============");
+console.log("Suma = ", suma);
+console.log("Resta = ", resta);
+console.log("Multiplicar = ", multiplicar);
+console.log("Dividir = ", dividir);
+
+console.log("============== COMPARACION =============");
+console.log("a > b", a>b);
+console.log("a < b", a<b);
+console.log("a >= b", a>=b);
+console.log("a <= b", a<=b);
+console.log("a != b", a!=b);
+console.log("a == b", a==b);
+console.log("");
+
+console.log("---------------------------------------------------------------------------");
+console.log("====== Parte 3: Uso de Operadores Lógicos y Concatenación de Strings ======");
+console.log("---------------------------------------------------------------------------");
+
+let esMayorEdad = true;
+let tieneLicencia = false;
+
+console.log("Mayor de Edad? ", esMayorEdad);
+console.log("Tiene Licencia? ", tieneLicencia);
+console.log("Acceso a bono: ",esMayorEdad && tieneLicencia);
+console.log("Licencia: ",esMayorEdad || tieneLicencia);
+
+console.log("----------------------");
+
+let estudiante = "Jesus Carvajal";
+let edadEstudiante = 20;
+
+let mensaje = "Bienvenido Sr(a): " + estudiante + " Su Edad Es " + edadEstudiante + " Años.";
+console.log(mensaje);
+
+let mensaje2 = `Bienvenido Sr(a): ${estudiante} Su Edad Es ${edadEstudiante} Años`;
+console.log(mensaje2);
