@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 13 - Funciones JS</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .calculadora-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #3b3b3b;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #resultado {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        #resultado h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        #resultado p {
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="calculadora-container">
+        <h1>Calculadora Talento Tech</h1>
+        <div class="input-group">
+            <label for="num1">Número 1:</label>
+            <input type="number" id="num1" placeholder="Ingrese el primer número">
+        
+        </div>
+        
+        <div class="input-group">
+            <label for="num2">Número 2:</label>
+            <input type="number" id="num2" placeholder="Ingrese el segundo número">
+        
+        </div>
+        
+        <div class="input-group">
+            <label for="operacion">Operacion: </label>
+            <select id="operacion">
+                <option value="suma">Sumar (+)</option>
+                <option value="resta">Restar (-)</option>
+                <option value="multiplicacion">Multiplicar (*)</option>
+                <option value="division">Dividir (/)</option>
+            </select>
+        </div>
+
+        <button onclick="calculo()">Calcular</button>
+
+        <div id="resultado">
+            <h2>Resultado:</h2>
+            <p>El resultado se muestra AQUI</p>
+
+        </div>
+    </div>
+
+    <script>
+        function restar(a, b) {
+            return a - b;
+        }
+
+        function sumar(a, b) {
+            return a + b;
+        }
+
+        function multiplicar(a, b) {
+            return a * b;
+        }
+
+        function dividir(a, b) {
+            if (b == 0) {
+                return "Error: División por cero";
+            }
+            return a / b;
+        }
+
+        function calcular (a, b, operacion) {
+            switch (operacion) {
+                case "suma":
+                    return sumar(a, b);
+                case "resta":
+                    return restar(a, b);
+                case "multiplicacion":
+                    return multiplicar(a, b);
+                case "division":
+                    return dividir(a, b);
+                default:
+                    return "Operación no válida";
+            }
+        }
+
+        function calculo() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            const operacion = document.getElementById("operacion").value;
+
+            const resultado = calcular(num1, num2, operacion);
+            document.getElementById("resultado").querySelector("p").textContent = resultado;
+        }
+
+
+    </script>
+    
+</body>
+</html>
