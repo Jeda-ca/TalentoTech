@@ -146,12 +146,3 @@ main p {
     padding-left: 2.5rem;
   }
 }
-
-/* Script para el funcionamiento del menú móvil (agregar con JS) */
-/* Este CSS asume que agregarás este script en tu HTML:
-
-document.getElementById('nav-toggle').addEventListener('click', function() {
-  document.getElementById('navbar').classList.toggle('active');
-});
-
-*/
